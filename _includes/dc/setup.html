@@ -1,0 +1,53 @@
+{% comment %}
+User Workshop: Novice Programmer
+{% endcomment %}
+
+
+{% if site.curriculum == "user-novice" %}
+
+{% if site.flavor == "r" %}
+<p>
+  The setup instructions for an AI Carpentry Learning Programming with GenAI workshop can be found at
+  <a href="https://carpentries-incubator.github.io/ai-carpentry-user-workshop-novice/#setup"> the workshop overview site</a>.
+</p>
+
+{% elsif site.flavor == "python" %}
+<p>
+  The setup instructions for an AI Carpentry Learning Programming with GenAI workshop can be found at
+  <a href="https://carpentries-incubator.github.io/ai-carpentry-user-workshop-novice/#setup"> the workshop overview site</a>.
+</p>
+{% else %}
+{% include warning-flavor.html %}
+{% endif %}
+
+
+{% comment %}
+User Workshop: Competent Programmer
+{% endcomment %}
+
+{% elsif site.curriculum == "user-cp" %}
+
+<p>
+  The setup instructions for an AI Carpentry Building and Validating Research Code with GenAI workshop can be found at
+  <a href="https://carpentries-incubator.github.io/ai-carpentry-user-workshop-cp/#setup"> the workshop overview site</a>.
+</p>
+
+
+{% comment %}
+Dev Workshop
+{% endcomment %}
+
+{% elsif site.curriculum == "developer" %}
+
+<p>
+  The setup instructions for an AI Carpentry Developer workshop can be found at
+  <a href="https://carpentries-incubator.github.io/ai-carpentry-dev-workshop/#setup"> the workshop overview site</a>.
+</p>
+
+{% comment %}
+All other workshops
+{% endcomment %}
+
+{% else %}
+{% include warning-curriculum.html %}
+{% endif %}
